@@ -55,10 +55,7 @@ export default {
     },
     safelist: [
         // 코드에서 니가 찾지 못해도, 여기에 기록한 클래스는 만들어줘
-        "px-3",
-        "py-2",
-        "px-5",
-        "py-3",
+      
         {
             pattern:
                 /(bg|text|border)-(primary|secondary|error|success|warning|info)-(main|contrast)/,

@@ -28,7 +28,7 @@ function Button({
             case "contained":
                 return `bg-${color}-main`;
             case "outlined":
-                return `border-${color}-main bg-transparent`;
+                return `border border-${color}-main bg-transparent`;
             case "text":
                 return `bg-transparent`;
             case "icon":

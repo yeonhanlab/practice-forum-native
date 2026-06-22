@@ -23,6 +23,8 @@ export default function RootLayout() {
     // SafeAreaView : SafeAreaProvider로 감싼 직계 자식에서는 View를 쓰지 못하고 safeAreaView를 써야함
     return (
 
+         // 원래 브라우저의 배경색은 흰색, 글자색은 검정색
+
         <SafeAreaProvider>
             <StatusBar style={theme === "dark" ? "light" : "dark"} />
             <SafeAreaView className={"flex-1 bg-background-default"}>
