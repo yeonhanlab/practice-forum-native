@@ -40,16 +40,26 @@ function AuthRegisterPage() {
     const onSubmit = async (data: RegisterUserInputType) => {
         try {
             const { confirmPassword, ...submitData } = data;
+
+            // string에는 slice(시작인덱스, 끝 전 인덱스)
+            const formattedDate = data.birthdate && data.birthdate !== ""
+                ? data.birthdate.slice(0, 4) +
+                  "-" +
+                  data.birthdate.slice(4, 6) +
+                  "-" +
+                  data.birthdate.slice(6, 8)
+                : undefined;
+
             const payload = {
                 ...submitData,
                 phoneNumber: data.phoneNumber === "" ? undefined : data.phoneNumber,
-                birthdate: data.birthdate === "" ? undefined : data.birthdate,
+                birthdate: formattedDate,
             };
 
             await userApi.registerUser(payload);
 
             if (Platform.OS === "web") {
-                window.alert("회원가입이 완료되었습니다. 록인을 진행해주세요.");
+                window.alert("회원가입이 완료되었습니다. 로그인을 진행해주세요.");
                 router.push("/auth/login");
             } else {
                 // 모바일 환경일 때에는 Alert.alert(제목, 내용, 버튼설정 Array)으로 경고창 출력
