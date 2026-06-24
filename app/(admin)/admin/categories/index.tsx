@@ -149,7 +149,7 @@ function AdminCategoryListPage() {
                                     ["w-24"],
                                     ["flex-row", "justify-center", "items-center", "gap-3"],
                                 )}>
-                                <Link href={`/admin/categories/${item.id}`} isChild>
+                                <Link href={`/admin/categories/${item.id}`} asChild>
                                     <Pressable>
                                         <Feather
                                             name={"edit-2"}
