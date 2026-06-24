@@ -67,9 +67,11 @@ function AdminCategoryListPage() {
             <Title
                 title={"카테고리 관리"}
                 description={"서비스의 토론장 카테고리를 관리하고 생성할 수 있습니다."}>
-                <Button variant={"contained"} color={"primary"}>
-                    + 카테고리 생성
-                </Button>
+                <Link href={"/admin/categories/create"} asChild>
+                    <Button variant={"contained"} color={"primary"}>
+                        + 카테고리 생성
+                    </Button>
+                </Link>
             </Title>
             <Card className={twMerge(["flex-1", "overflow-hidden"])}>
                 <View
@@ -120,7 +122,7 @@ function AdminCategoryListPage() {
                         <View
                             key={item.id}
                             className={twMerge(
-                                ["flex-row", "items-center", "px-4", "px-3"],
+                                ["flex-row", "items-center", "px-4", "py-3"],
                                 ["border-b", "border-divider", "hover:bg-background-default"],
                                 "transition-all",
                             )}>
