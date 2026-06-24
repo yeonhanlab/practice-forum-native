@@ -26,10 +26,11 @@ function AdminLayout() {
                 <ScrollView
                     className={"flex-1"}
                     contentContainerClassName={"p-4 md:p-8 items-center"}
-                    showsVerticalScrollIndicator={false}></ScrollView>
-                <View className={"w-full max-w-5xl"}>
-                    <Slot />
-                </View>
+                    showsVerticalScrollIndicator={false}>
+                    <View className={"w-full max-w-5xl"}>
+                        <Slot />
+                    </View>
+                </ScrollView>
             </View>
         </View>
     );
