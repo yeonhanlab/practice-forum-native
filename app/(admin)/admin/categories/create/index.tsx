@@ -15,6 +15,7 @@ import ErrorMessage from "@/components/common/form/ErrorMessage";
 import Button from "@/components/common/button/Button";
 import adminCategoryApi from "@/api/admin/adminCategoryApi";
 import { isAxiosError } from "axios";
+import { useEffect } from "react";
 
 function AdminCategoryCreatePage() {
     const router = useRouter();
@@ -45,6 +46,7 @@ function AdminCategoryCreatePage() {
             setError("root", { message: "카테고리 생성 중 알 수 없는 오류가 발생되었습니다." });
         }
     };
+
 
     return (
         <View className={twMerge("flex-1", "w-full")}>

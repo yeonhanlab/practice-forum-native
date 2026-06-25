@@ -50,6 +50,14 @@ export default {
                     main: "var(--success-main)",
                     contrast: "var(--success-contrast)",
                 },
+                warning: {
+                    main: "var(--warning-main)",
+                    contrast: "var(--warning-contrast)",
+                },
+                info: {
+                    main: "var(--info-main)",
+                    contrast: "var(--info-contrast)",
+                },
             },
         },
     },

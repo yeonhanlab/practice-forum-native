@@ -16,7 +16,7 @@ function Label({ size = "medium", className, children, ...props }: LabelProps) {
 
     return (
         <TextComponent
-            className={twMerge("font-semibold ml00.5", LABEL_SIZE_STYLES[size], className)}
+            className={twMerge("font-semibold ml-0.5", LABEL_SIZE_STYLES[size], className)}
             {...props}>
             {children}
         </TextComponent>
