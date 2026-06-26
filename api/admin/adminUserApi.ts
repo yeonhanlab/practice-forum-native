@@ -2,6 +2,7 @@ import axiosInstance from "@/api/axiosInstance";
 import { PaginationResponseType } from "@/types/common";
 import { User } from "@/types/user";
 import { AdminCreateUserInputType } from "@/app/schemas/user/adminCreateUserSchema";
+import { AdminUpdateUserInputType } from "@/app/schemas/user/adminUpdateUserSchema";
 
 const getUserList = async (page: number = 1, size: number = 20): Promise<PaginationResponseType<User>> => {
     // axios에서는 옵션값을 두번째 매개변수로 넣는데
@@ -17,6 +18,16 @@ const getUserList = async (page: number = 1, size: number = 20): Promise<Paginat
     return response.data.data;
 };
 
+const getUserById = async(id: number): Promise<User> => {
+    const response = await axiosInstance.get(`/admin/user/${id}`);
+        return response.data.data;
+}
+
+const updateUser = async (id: number, input: AdminUpdateUserInputType): Promise<User> => {
+    const response = await axiosInstance.patch(`/admin/user/${id}`, input);
+    return response.data.data;
+}
+
 const createUser = async (input: AdminCreateUserInputType): Promise<User> => {
     const response = await axiosInstance.post("/admin/user/create", input);
     return response.data.data;
@@ -29,6 +40,8 @@ const deleteUser = async(id: number):Promise<User> => {
 
 export default {
     getUserList,
+    getUserById,
+    updateUser,
     createUser,
     deleteUser,
 };
