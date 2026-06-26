@@ -42,13 +42,14 @@ function AuthRegisterPage() {
             const { confirmPassword, ...submitData } = data;
 
             // string에는 slice(시작인덱스, 끝 전 인덱스)
-            const formattedDate = data.birthdate && data.birthdate !== ""
-                ? data.birthdate.slice(0, 4) +
-                  "-" +
-                  data.birthdate.slice(4, 6) +
-                  "-" +
-                  data.birthdate.slice(6, 8)
-                : undefined;
+            const formattedDate =
+                data.birthdate && data.birthdate !== ""
+                    ? data.birthdate.slice(0, 4) +
+                      "-" +
+                      data.birthdate.slice(4, 6) +
+                      "-" +
+                      data.birthdate.slice(6, 8)
+                    : undefined;
 
             const payload = {
                 ...submitData,
