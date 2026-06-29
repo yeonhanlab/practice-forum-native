@@ -120,7 +120,7 @@ function AdminNoticeListPage() {
                             </Pressable>
                             <TextComponent
                                 className={twMerge("w-24", [
-                                    "text-sm",
+                                    "text-xs",
                                     "text-text-secondary",
                                     "text-center",
                                 ])}>

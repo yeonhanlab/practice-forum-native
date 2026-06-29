@@ -17,6 +17,7 @@ const login = async (data: LoginUserInputType): Promise<{ user: User, token: str
     return response.data.data;
 };
 
+
 export default {
     registerUser,
     login,

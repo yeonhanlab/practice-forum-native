@@ -4,8 +4,15 @@ import { AdminNoticeInputType } from "@/app/schemas/notice/adminNoticeSchema";
 const createNotice = async (input: AdminNoticeInputType) => {
     const response = await axiosInstance.post(`/admin/notice/create`, input);
     return response.data.data;
-}
+};
+
+const deleteNotice = async (id: number): Promise<void> => {
+    // Promise라는 뜻은 내가 기다려야 결과를 알 수 있다 => async - await을 썼으면 무조건임
+    await axiosInstance.delete(`/admin/notice/${id}`);
+    // return값이 없다
+};
 
 export default {
     createNotice,
-}
+    deleteNotice,
+};

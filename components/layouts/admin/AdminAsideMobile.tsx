@@ -89,7 +89,7 @@ function AdminAsideMobile() {
                                                 // hover를 해줄 이유가 없음
                                                 // active : 클릭하고 있거나 터치하고 있는 순간 적용
                                                 isActive
-                                                    ? "bg-primary-main"
+                                                    ? 'bg-primary-main'
                                                     : "active:bg-background-default",
                                             )}>
                                             <Feather
@@ -97,7 +97,7 @@ function AdminAsideMobile() {
                                                 size={20}
                                                 className={
                                                     isActive
-                                                        ? "text-primary-main"
+                                                        ? "text-primary-contrast"
                                                         : "text-text-secondary"
                                                 }
                                             />

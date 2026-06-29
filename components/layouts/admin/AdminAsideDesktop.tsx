@@ -39,20 +39,24 @@ function AdminAsideDesktop() {
                                         ["flex-row", "items-center", "gap-3", "px-4", "py-3.5"],
                                         ["rounded-xl", "transition-all"],
                                         isActive
-                                            ? "bg-primary-main"
+                                            ? "bg-primary-main text-primary-contrast"
                                             : "hover:bg-background-default", // 지금 현재 사용자가 위치한 메뉴는 배경색 강조
                                     )}>
                                     <Feather
                                         name={item.icon as any}
                                         size={18}
                                         className={
-                                            isActive ? "text-text-default" : "text-text-secondary"
+                                            isActive
+                                                ? "text-primary-contrast"
+                                                : "text-text-secondary"
                                         }
                                     />
                                     <TextComponent
                                         className={twMerge(
                                             "font-bold",
-                                            isActive ? "text-text-default" : "text-text-default",
+                                            isActive
+                                                ? "text-primary-contrast"
+                                                : "text-text-default",
                                         )}>
                                         {item.label}
                                     </TextComponent>
