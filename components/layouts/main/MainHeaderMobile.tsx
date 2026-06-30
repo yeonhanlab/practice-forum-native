@@ -14,29 +14,17 @@ import { Role } from "@/types/user";
 import Button from "@/components/common/button/Button";
 import Accordion from "@/components/common/accordion/Accordion";
 
-function MainHeaderMobile() {
+interface Props {
+    list: Category[];
+}
+
+function MainHeaderMobile({ list }: Props) {
     const router = useRouter();
     const { theme, onChangeTheme } = useThemeStore();
     const { isLoggedIn, user, logout } = useAuthStore();
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [list, setList] = useState<Category[]>([]);
-    // 카테고리의 정보를 불러오기 전이라도 로그아웃 등의 기능은 사용할 수 있어야 되므로
-    // isLoading은 없을 것임
-
-    useEffect(() => {
-        const loadCategories = async () => {
-            try {
-                const result = await categoryApi.getCategoryList();
-                setList(result);
-            } catch (error) {
-                console.log(error);
-            }
-        };
-
-        loadCategories().then(() => {});
-    }, []);
-
+ 
     const handleNavigate = (path: string) => {
         setIsMenuOpen(false);
         router.push(path);
