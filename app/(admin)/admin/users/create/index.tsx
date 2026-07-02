@@ -5,7 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import {
     AdminCreateUserInputType,
     adminCreateUserSchema,
-} from "@/app/schemas/user/adminCreateUserSchema";
+} from "@/app/schemas/admin/adminCreateUserSchema";
 import { Gender, Role } from "@/types/user";
 import { isAxiosError } from "axios";
 import adminUserApi from "@/api/admin/adminUserApi";

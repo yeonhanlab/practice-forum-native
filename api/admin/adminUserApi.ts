@@ -1,8 +1,8 @@
 import axiosInstance from "@/api/axiosInstance";
 import { PaginationResponseType } from "@/types/common";
 import { User } from "@/types/user";
-import { AdminCreateUserInputType } from "@/app/schemas/user/adminCreateUserSchema";
-import { AdminUpdateUserInputType } from "@/app/schemas/user/adminUpdateUserSchema";
+import { AdminCreateUserInputType } from "@/app/schemas/admin/adminCreateUserSchema";
+import { AdminUpdateUserInputType } from "@/app/schemas/admin/adminUpdateUserSchema";
 
 const getUserList = async (page: number = 1, size: number = 20): Promise<PaginationResponseType<User>> => {
     // axios에서는 옵션값을 두번째 매개변수로 넣는데

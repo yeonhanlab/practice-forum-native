@@ -14,7 +14,7 @@ import Button from "@/components/common/button/Button";
 import {
     AdminUpdateUserInputType,
     adminUpdateUserSchema,
-} from "@/app/schemas/user/adminUpdateUserSchema";
+} from "@/app/schemas/admin/adminUpdateUserSchema";
 import { useEffect, useState } from "react";
 import adminUserApi from "@/api/admin/adminUserApi";
 import LoadingIndicator from "@/components/common/loading/LoadingIndicator";

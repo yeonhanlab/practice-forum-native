@@ -218,13 +218,13 @@ function MainHeaderDesktop({ list }: Props) {
                             <Button
                                 variant={"text"}
                                 color={"primary"}
-                                onPress={() => router.push("//auth/login")}>
+                                onPress={() => router.push("/auth/login")}>
                                 로그인
                             </Button>
                             <Button
                                 variant={"contained"}
                                 color={"primary"}
-                                onPress={() => router.push("//auth/register")}>
+                                onPress={() => router.push("/auth/register")}>
                                 회원가입
                             </Button>
                         </View>
